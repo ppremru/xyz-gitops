@@ -1,6 +1,6 @@
-# Helm Life
+# GitOps Life
 
-# XYZ Application Helm Chart
+# xyz and Friends
 
 This repository contains the Helm chart for deploying the XYZ application to an OpenShift cluster.
 
