@@ -5,5 +5,5 @@ To deploy the `xyz` application to your OpenShift cluster, use the following com
 ### Deploy the Chart
 
 ```bash
-helm install xyz-release ./xyz-chart --namespace my-project
+helm install xyz-release ./xyz-helm --namespace my-project
 ```
