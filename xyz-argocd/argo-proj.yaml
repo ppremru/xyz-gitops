@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: xyz-project
+  namespace: argocd
+spec:
+  description: Project for the XYZ application.
+
+  # sourceRepos defines which Git repositories can be used by applications in this project.
+  # Using '*' allows any repository, but you can list specific ones for security.
+  sourceRepos:
+  - '*'
+
+  # destinations defines which clusters and namespaces this project is allowed to deploy to.
+  # The server must be the same as in your Application CRD.
+  destinations:
+  - namespace: your-project-name
+    server: https://kubernetes.default.svc
+  - namespace: peggy-dev
+    server: https://kubernetes.default.svc
+
+  # clusterResourceWhitelist provides a list of allowed cluster-level resources to deploy
+  # This is often left empty for basic app deployments.
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
