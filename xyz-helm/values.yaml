@@ -1,11 +1,11 @@
 replicaCount: 1
 
 application:
-  message: "Hello from helm value.yaml v1.0.1" 
+  message: "Hello from helm value.yaml v1.0.0" 
 
 image:
   repository: quay.io/ppremru/xyz
-  tag: v1.0.1
+  tag: v1.0.0
   pullPolicy: IfNotPresent
 
 service:
